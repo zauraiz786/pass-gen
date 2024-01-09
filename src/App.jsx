@@ -19,7 +19,9 @@ export default function App() {
         if (lowerCase) str += 'abcdefghijklmnopqrstuvwxyz';
         if (number) str += '0123456789';
         if (symbol) str += '!@#$%^&*()';
-        
+        if(!(symbol) && !(upperCase) && !(lowerCase) && !(number)){
+          setLowerCase(true)
+        }
         for (let i = 0; i < length; i++) {
          let random = Math.floor(Math.random() * str.length)
          setPassword(pass += str[random])
